@@ -1,0 +1,49 @@
+# print Crown pattern
+
+# Function to print
+# crown pattern
+def crown(length, height):
+    for i in range(0, height):
+        for j in range(0, length):
+
+            # for first row, print '*'
+            # i.e, for top part of crown
+            if (i == 0):
+
+                # print '*' at first,
+                # middle and last column
+                if (j == 0 or j == height or
+                        j == length - 1):
+                    print("*", end="")
+
+                else:
+                    print(" ", end="")
+
+                    # print '*' at base of
+            # crown i.e, for last row
+            elif (i == height - 1):
+                print("*", end="")
+
+                # fill '#' to make
+            # a perfect crown
+            elif ((j < i or j > height - i) and
+                  (j < height + i or
+                   j >= length - i)):
+                print("*", end="")
+
+            else:
+                print(" ", end="")
+
+        print()
+
+    # Driver code
+
+
+# length of crown
+length = 25
+
+# height of crown
+height = int((length - 1) / 2)
+
+# function calling
+crown(length, height)
