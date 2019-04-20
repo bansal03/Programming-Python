@@ -1,0 +1,12 @@
+# Python Program - Display Powers of 2
+
+print("Enter 'x' for exit.");
+limit = input("Upto how many terms to print power of 2? ")
+if limit == 'x':
+    exit();
+else:
+    term = int(limit);
+    print();
+    res = list(map(lambda x: 2 ** x, range(term)));
+    for i in range(term):
+        print("2 raised to the power",i,"=",res[i]);
